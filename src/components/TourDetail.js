@@ -23,13 +23,13 @@ const TourDetail = () => {
     <>
       {content.map((c) => (
         <div className="info">
-          <div>
-            <img src={c.Picture1} alt={c.Name} />
+          <div className="desc-container">
+            <img className="pic" src={c.Picture1} alt={c.Name} />
           </div>
 
           <div className="desc-container">
             <h2 className="desc">{c.Name}</h2>
-            <p className="desc">{c.Toldescribe}</p>
+            <p className="desc">{c.Description}</p>
             <div className="desc">
               <p>開放時間</p>
               <p>{c.Opentime}</p>
@@ -38,6 +38,16 @@ const TourDetail = () => {
               <p>景點地址</p>
               <p>{c.Add}</p>
             </div>
+            {c?.Parkinginfo && (
+              <div className="desc">
+                <p>{c.Parkinginfo}</p>
+              </div>
+            )}
+            {c?.Travellinginfo && (
+              <div className="desc">
+                <p>{c.Travellinginfo}</p>
+              </div>
+            )}
           </div>
         </div>
       ))}

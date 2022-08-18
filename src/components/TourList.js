@@ -23,7 +23,8 @@ const TourList = () => {
         return (
           <div key={c.Id} className="list">
             <Link className="link" to={`/haveaniceday/tour/${c.Id}`}>
-              {c.Name}
+              <img className="pic2" src={c.Picture1} alt={c.Name} />
+              <p className="title">{c.Name}</p>
             </Link>
           </div>
         );

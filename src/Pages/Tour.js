@@ -11,9 +11,11 @@ const Tour = () => {
           top: "15vh",
           color: "rgb(122, 93, 7)",
           fontWeight: "500",
+          zIndex: "2",
+          fontFamily: '"Aboreto", cursive',
         }}
       >
-        來去高雄
+        GO GO Kaohsiung
       </h1>
 
       <Outlet />
