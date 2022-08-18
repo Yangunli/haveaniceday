@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/haveaniceday/static/css/main.e044ea55.css",
-    "main.js": "/haveaniceday/static/js/main.8ae1a037.js",
+    "main.css": "/haveaniceday/static/css/main.54377883.css",
+    "main.js": "/haveaniceday/static/js/main.02f6d2eb.js",
     "static/js/787.90e38b08.chunk.js": "/haveaniceday/static/js/787.90e38b08.chunk.js",
     "service-worker.js": "/haveaniceday/service-worker.js",
     "index.html": "/haveaniceday/index.html",
-    "main.e044ea55.css.map": "/haveaniceday/static/css/main.e044ea55.css.map",
-    "main.8ae1a037.js.map": "/haveaniceday/static/js/main.8ae1a037.js.map",
+    "main.54377883.css.map": "/haveaniceday/static/css/main.54377883.css.map",
+    "main.02f6d2eb.js.map": "/haveaniceday/static/js/main.02f6d2eb.js.map",
     "787.90e38b08.chunk.js.map": "/haveaniceday/static/js/787.90e38b08.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e044ea55.css",
-    "static/js/main.8ae1a037.js"
+    "static/css/main.54377883.css",
+    "static/js/main.02f6d2eb.js"
   ]
 }
