@@ -11,26 +11,26 @@ import TourList from "./components/TourList";
 function App() {
   <nav>
     <li>
-      <Link to="/">Home</Link>
+      <Link to="/haveaniceday/">Home</Link>
     </li>
     <li>
-      <Link to="/faq">FAQ</Link>
+      <Link to="/haveaniceday/faq">FAQ</Link>
     </li>
     <li>
-      <Link to="/tour">Tour</Link>
+      <Link to="/haveaniceday/tour">Tour</Link>
     </li>
   </nav>;
 
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home />} exact />
-          <Route path="/tour" element={<Tour />}>
+        <Route path="/haveaniceday/" element={<Layout />}>
+          <Route path="/haveaniceday/" element={<Home />} exact />
+          <Route path="/haveaniceday/tour" element={<Tour />}>
             <Route index element={<TourList />} />
             <Route path=":Id" element={<TourDetail />} />
           </Route>
-          <Route path="/faq" element={<FAQ />} />
+          <Route path="/haveaniceday/faq" element={<FAQ />} />
         </Route>
       </Routes>
     </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const TourList = () => {
   const [content, setContent] = useState([]);
@@ -22,7 +22,7 @@ const TourList = () => {
       {content.map((c) => {
         return (
           <div key={c.Id} className="list">
-            <Link className="link" to={`/tour/${c.Id}`}>
+            <Link className="link" to={`/haveaniceday/tour/${c.Id}`}>
               {c.Name}
             </Link>
           </div>
