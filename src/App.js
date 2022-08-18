@@ -1,24 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import Layout from "./components/Layout";
+import Tour from "./Pages/Tour";
+import Home from "./Pages/Home";
+import FAQ from "./Pages/FAQ";
+import TourDetail from "./components/TourDetail";
+import TourList from "./components/TourList";
 
 function App() {
+  <nav>
+    <li>
+      <Link to="/">Home</Link>
+    </li>
+    <li>
+      <Link to="/faq">FAQ</Link>
+    </li>
+    <li>
+      <Link to="/tour">Tour</Link>
+    </li>
+  </nav>;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Home />} exact />
+          <Route path="/tour" element={<Tour />}>
+            <Route index element={<TourList />} />
+            <Route path=":Id" element={<TourDetail />} />
+          </Route>
+          <Route path="/faq" element={<FAQ />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
