@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const TourList = () => {
+const Kaohsiung = () => {
   const [content, setContent] = useState([]);
+
   const fetchView = async () => {
     const { data } = await axios.get(
       `https://api.kcg.gov.tw/api/service/Get/9c8e1450-e833-499c-8320-29b36b7ace5c`
@@ -14,6 +15,7 @@ const TourList = () => {
 
   useEffect(() => {
     fetchView();
+
     // eslint-disable-next-line
   }, []);
 
@@ -22,9 +24,15 @@ const TourList = () => {
       {content.map((c) => {
         return (
           <div key={c.Id} className="list">
-            <Link className="link" to={`/haveaniceday/tour/${c.Id}`}>
-              <img className="pic2" src={c.Picture1} alt={c.Name} />
-              <p className="title">{c.Name}</p>
+            <Link className="link" to={`/haveaniceday/kaohsiung/${c.Id}`}>
+              <img
+                className="pic2"
+                src={c.Picture1}
+                alt={c.Name}
+                loading="lazy"
+                decoding="async"
+              />
+              <p>{c.Name}</p>
             </Link>
           </div>
         );
@@ -33,4 +41,4 @@ const TourList = () => {
   );
 };
 
-export default TourList;
+export default Kaohsiung;

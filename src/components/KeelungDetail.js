@@ -3,18 +3,17 @@ import axios from "axios";
 import "../App.css";
 import { useParams, useNavigate } from "react-router-dom";
 
-const TourDetail = () => {
+const KeelungDetail = () => {
   const [content, setContent] = useState([]);
   const { Id } = useParams();
+  const navigate = useNavigate();
   const fetchView = async () => {
     const { data } = await axios.get(
-      `https://api.kcg.gov.tw/api/service/Get/9c8e1450-e833-499c-8320-29b36b7ace5c`
+      `https://cors.eu.org/https://tour.klcg.gov.tw/data/attractions.json`
     );
-    const Info = data.data.XML_Head.Infos.Info.filter((item) => item.Id === Id);
-    console.log(Info);
+    const Info = data.attractions.filter((item) => item.id === Id);
     setContent(Info);
   };
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetchView();
@@ -25,7 +24,7 @@ const TourDetail = () => {
       {content.map((c) => (
         <div className="info">
           <div className="desc-container">
-            <img className="pic" src={c.Picture1} alt={c.Name} />
+            <img className="pic" src={c.cover_image} alt={c.title} />
           </div>
 
           <div className="desc-container">
@@ -42,19 +41,19 @@ const TourDetail = () => {
                   src="https://img.icons8.com/wired/30/FD7E14/chevron-left.png"
                 />
 
-                <p>{c.Name}</p>
+                <p>{c.title}</p>
               </div>
             </h2>
-            <p className="desc">{c.Description}</p>
+            {/* <p className="desc">{c.Description}</p> */}
             <div className="desc">
               <p>開放時間</p>
-              <p>{c.Opentime}</p>
+              <p>{c.visit_hours}</p>
             </div>
             <div className="desc">
               <p>景點地址</p>
-              <p>{c.Add}</p>
+              <p>{c.address}</p>
             </div>
-            {c?.Parkinginfo && (
+            {/* {c?.Parkinginfo && (
               <div className="desc">
                 <p>{c.Parkinginfo}</p>
               </div>
@@ -63,7 +62,7 @@ const TourDetail = () => {
               <div className="desc">
                 <p>{c.Travellinginfo}</p>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       ))}
@@ -71,4 +70,4 @@ const TourDetail = () => {
   );
 };
 
-export default TourDetail;
+export default KeelungDetail;

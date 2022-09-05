@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 const Tour = () => {
   return (
     <div className="container">
-      <h1
+      {/* <h1
         style={{
           position: "fixed",
           width: "100%",
@@ -15,8 +15,8 @@ const Tour = () => {
           fontFamily: '"Aboreto", cursive',
         }}
       >
-        GO GO Kaohsiung
-      </h1>
+      
+      </h1> */}
 
       <Outlet />
     </div>

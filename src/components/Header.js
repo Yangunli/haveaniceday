@@ -4,22 +4,40 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header">
-      <div className="logo">HAVE A NICE DAY</div>
+      <Link
+        className="logo link "
+        to="/haveaniceday/"
+        onClick={() => window.scroll(0, 0)}
+      >
+        HAVE A NICE DAY
+      </Link>
       <nav className="nav">
         <div>
-          <Link className="link " to="/haveaniceday/">
-            Home
+          <Link
+            className="link "
+            to="/haveaniceday/taipei"
+            onClick={() => window.scroll(0, 0)}
+          >
+            Taipei/
           </Link>
         </div>
         <div>
-          <Link className="link" to="/haveaniceday/faq">
-            FAQ
+          <Link
+            className="link "
+            to="/haveaniceday/keelung"
+            onClick={() => window.scroll(0, 0)}
+          >
+            Keelung/
           </Link>
         </div>
 
         <div>
-          <Link className="link" to="/haveaniceday/tour">
-            Tour
+          <Link
+            className="link"
+            to="/haveaniceday/kaohsiung"
+            onClick={() => window.scroll(0, 0)}
+          >
+            Kaohsiung
           </Link>
         </div>
       </nav>
