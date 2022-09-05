@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/haveaniceday/static/css/main.46e2e274.css",
+    "main.css": "/haveaniceday/static/css/main.90c58ce6.css",
     "main.js": "/haveaniceday/static/js/main.bc3af1c3.js",
     "static/js/787.90e38b08.chunk.js": "/haveaniceday/static/js/787.90e38b08.chunk.js",
     "service-worker.js": "/haveaniceday/service-worker.js",
     "static/media/Journey-bro.svg": "/haveaniceday/static/media/Journey-bro.d9884226c29af6edb439826bb0b09d4e.svg",
     "index.html": "/haveaniceday/index.html",
-    "main.46e2e274.css.map": "/haveaniceday/static/css/main.46e2e274.css.map",
+    "main.90c58ce6.css.map": "/haveaniceday/static/css/main.90c58ce6.css.map",
     "main.bc3af1c3.js.map": "/haveaniceday/static/js/main.bc3af1c3.js.map",
     "787.90e38b08.chunk.js.map": "/haveaniceday/static/js/787.90e38b08.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46e2e274.css",
+    "static/css/main.90c58ce6.css",
     "static/js/main.bc3af1c3.js"
   ]
 }
