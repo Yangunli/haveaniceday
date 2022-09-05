@@ -118,13 +118,10 @@
 }
 
 .list-container {
+  width: 100vw;
   padding: 30px 50px;
   display: grid;
-  grid-template-columns: repeat(
-    6,
-    1fr
-  ); /*設定 Grid 為4欄，每欄寬度為四分之一。 等同於 grid-template-columns: 1fr 1fr 1fr 1fr*/
-  /* 設定欄位間的左右間距 (不含最左/最右) */
+  grid-template-columns: repeat(6, 1fr);
   row-gap: 30px;
 }
 
@@ -132,7 +129,6 @@
   background-color: rgb(228, 216, 189);
   width: 100vw;
   min-height: 100vh;
-  padding-top: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -229,6 +225,11 @@
     width: 200px;
     font-size: 2rem;
   }
+  .home-link-container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 820px) {
@@ -242,10 +243,6 @@
     height: 200px;
     width: 200px;
     font-size: 2rem;
-  }
-  .home-link-container {
-    flex-direction: row;
-    justify-content: space-around;
   }
 }
 
