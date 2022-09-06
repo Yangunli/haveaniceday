@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -12,32 +11,31 @@ const Header = () => {
         HAVE A NICE DAY
       </Link>
       <nav className="nav">
-        <div>
-          <Link
-            className="link "
-            to="/haveaniceday/taipei"
-            onClick={() => window.scroll(0, 0)}
-          >
-            Taipei/
-          </Link>
-        </div>
-        <div>
-          <Link
-            className="link "
-            to="/haveaniceday/keelung"
-            onClick={() => window.scroll(0, 0)}
-          >
-            Keelung/
-          </Link>
-        </div>
-
-        <div>
+        <div className="header-link">
           <Link
             className="link"
             to="/haveaniceday/kaohsiung"
             onClick={() => window.scroll(0, 0)}
           >
             Kaohsiung
+          </Link>
+        </div>
+        <div className="header-link">
+          <Link
+            className="link "
+            to="/haveaniceday/taipei"
+            onClick={() => window.scroll(0, 0)}
+          >
+            Taipei
+          </Link>
+        </div>
+        <div className="header-link">
+          <Link
+            className="link "
+            to="/haveaniceday/keelung"
+            onClick={() => window.scroll(0, 0)}
+          >
+            Keelung
           </Link>
         </div>
       </nav>

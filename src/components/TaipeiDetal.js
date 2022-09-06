@@ -19,7 +19,7 @@ const TaipeiDetal = () => {
               <div
                 style={{
                   display: "flex",
-                  width: "50vw",
+                  width: "60vw",
                 }}
               >
                 <img
@@ -28,7 +28,14 @@ const TaipeiDetal = () => {
                   src="https://img.icons8.com/wired/30/FD7E14/chevron-left.png"
                 />
 
-                <p>{tpe.name}</p>
+                <p
+                  style={{
+                    display: "flex",
+                    alignContent: "center",
+                  }}
+                >
+                  {tpe.name}
+                </p>
               </div>
             </h2>
             <p className="desc">{tpe.introduction}</p>

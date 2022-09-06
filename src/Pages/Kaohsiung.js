@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -25,13 +25,7 @@ const Kaohsiung = () => {
         return (
           <div key={c.Id} className="list">
             <Link className="link" to={`/haveaniceday/kaohsiung/${c.Id}`}>
-              <img
-                className="pic2"
-                src={c.Picture1}
-                alt={c.Name}
-                loading="lazy"
-                decoding="async"
-              />
+              <img className="pic2" src={c.Picture1} alt={c.Name} />
               <p>{c.Name}</p>
             </Link>
           </div>

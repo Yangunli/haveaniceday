@@ -1,38 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import twitter from "../assets/Twitter.svg";
+import linkedin from "../assets/LinkedIn.svg";
+import github from "../assets/Octocat.svg";
 
 const Footer = () => {
   return (
     <div className="footer">
       <div className="ref">
-        <div className="footer-logo">HAVE A NICE DAY</div>
+        <div className="footer-c">2022 © Yangunli</div>
         <div className="footer-link">
           <div className="footer-a">
-            <Link
-              className="link"
-              to="/haveaniceday/taipei"
-              onClick={() => window.scroll(0, 0)}
-            >
-              Taipei
-            </Link>
+            <small>
+              Illustrations by
+              <a href="https://storyset.com/people"> Storyset </a>
+            </small>
           </div>
-          <div className="footer-a">
-            <Link
-              className="link"
-              to="/haveaniceday/keelung"
-              onClick={() => window.scroll(0, 0)}
-            >
-              Keelung
-            </Link>
-          </div>
-          <div className="footer-a">
-            <Link
-              className="link"
-              to="/haveaniceday/kaohsiung"
-              onClick={() => window.scroll(0, 0)}
-            >
-              Kaohsiung
-            </Link>
+          <div className="footer-icons">
+            <a href="https://twitter.com/yanyangirl_tw">
+              <img src={twitter} alt="" />
+            </a>
+            <a href="https://www.linkedin.com/in/wei-yi-li-898baa234/">
+              <img src={linkedin} alt="" />
+            </a>
+
+            <a href="https://github.com/Yangunli">
+              <img src={github} alt="" />
+            </a>
           </div>
         </div>
       </div>

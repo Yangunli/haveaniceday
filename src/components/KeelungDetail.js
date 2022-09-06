@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
 import { useParams, useNavigate } from "react-router-dom";
@@ -32,7 +32,7 @@ const KeelungDetail = () => {
               <div
                 style={{
                   display: "flex",
-                  width: "50vw",
+                  width: "60vw",
                 }}
               >
                 <img
@@ -41,7 +41,9 @@ const KeelungDetail = () => {
                   src="https://img.icons8.com/wired/30/FD7E14/chevron-left.png"
                 />
 
-                <p>{c.title}</p>
+                <p style={{ display: "flex", alignContent: "center" }}>
+                  {c.title}
+                </p>
               </div>
             </h2>
             {/* <p className="desc">{c.Description}</p> */}

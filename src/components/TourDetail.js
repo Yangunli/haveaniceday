@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
 import { useParams, useNavigate } from "react-router-dom";
@@ -11,7 +11,6 @@ const TourDetail = () => {
       `https://api.kcg.gov.tw/api/service/Get/9c8e1450-e833-499c-8320-29b36b7ace5c`
     );
     const Info = data.data.XML_Head.Infos.Info.filter((item) => item.Id === Id);
-    console.log(Info);
     setContent(Info);
   };
   const navigate = useNavigate();
@@ -33,7 +32,7 @@ const TourDetail = () => {
               <div
                 style={{
                   display: "flex",
-                  width: "50vw",
+                  width: "60vw",
                 }}
               >
                 <img
@@ -42,7 +41,14 @@ const TourDetail = () => {
                   src="https://img.icons8.com/wired/30/FD7E14/chevron-left.png"
                 />
 
-                <p>{c.Name}</p>
+                <p
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  {c.Name}
+                </p>
               </div>
             </h2>
             <p className="desc">{c.Description}</p>

@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { taipeiView } from "../assets/taipei";
 
@@ -12,15 +11,9 @@ const Taipei = () => {
           //   <p>{tpe.name}</p>
           //   <img src={tpe.images[0].src} alt="" />
           // </div>
-          <div key={tpe.images[1]?.src || tpe.images[0].src} className="list">
+          <div key={tpe.id} className="list">
             <Link className="link" to={`/haveaniceday/taipei/${tpe.id}`}>
-              <img
-                className="pic2"
-                src={tpe.images[0].src}
-                alt={tpe.name}
-                loading="lazy"
-                decoding="async"
-              />
+              <img className="pic2" src={tpe.images[0].src} alt={tpe.name} />
 
               <p>{tpe.name}</p>
             </Link>
