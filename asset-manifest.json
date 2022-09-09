@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/haveaniceday/static/css/main.ef49ecec.css",
-    "main.js": "/haveaniceday/static/js/main.1b0b3c39.js",
+    "main.css": "/haveaniceday/static/css/main.20286791.css",
+    "main.js": "/haveaniceday/static/js/main.71f0f975.js",
     "static/js/787.90e38b08.chunk.js": "/haveaniceday/static/js/787.90e38b08.chunk.js",
     "service-worker.js": "/haveaniceday/service-worker.js",
     "static/media/Journey-bro.svg": "/haveaniceday/static/media/Journey-bro.d9884226c29af6edb439826bb0b09d4e.svg",
@@ -9,12 +9,12 @@
     "static/media/Twitter.svg": "/haveaniceday/static/media/Twitter.3e36ebf5ac78d97e86c9a9c25e38fe72.svg",
     "static/media/LinkedIn.svg": "/haveaniceday/static/media/LinkedIn.8fbf6532f453a0b44d7d3011761e4395.svg",
     "index.html": "/haveaniceday/index.html",
-    "main.ef49ecec.css.map": "/haveaniceday/static/css/main.ef49ecec.css.map",
-    "main.1b0b3c39.js.map": "/haveaniceday/static/js/main.1b0b3c39.js.map",
+    "main.20286791.css.map": "/haveaniceday/static/css/main.20286791.css.map",
+    "main.71f0f975.js.map": "/haveaniceday/static/js/main.71f0f975.js.map",
     "787.90e38b08.chunk.js.map": "/haveaniceday/static/js/787.90e38b08.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef49ecec.css",
-    "static/js/main.1b0b3c39.js"
+    "static/css/main.20286791.css",
+    "static/js/main.71f0f975.js"
   ]
 }
