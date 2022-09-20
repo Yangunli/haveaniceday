@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
 import { useParams, useNavigate } from "react-router-dom";
+import Loading from "./Loading";
 
 const TourDetail = () => {
   const [content, setContent] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const { Id } = useParams();
   const fetchView = async () => {
     const { data } = await axios.get(
@@ -17,8 +19,13 @@ const TourDetail = () => {
 
   useEffect(() => {
     fetchView();
+    setIsLoading(false);
     // eslint-disable-next-line
   }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
     <>
       {content.map((c) => (

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Loading from "../components/Loading";
 
 const Kaohsiung = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [content, setContent] = useState([]);
 
   const fetchView = async () => {
@@ -11,6 +13,7 @@ const Kaohsiung = () => {
     );
     const newData = data.data.XML_Head.Infos.Info;
     setContent(newData);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -18,6 +21,10 @@ const Kaohsiung = () => {
 
     // eslint-disable-next-line
   }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div className="list-container">

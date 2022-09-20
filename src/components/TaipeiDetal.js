@@ -4,7 +4,6 @@ import { taipeiView } from "../assets/taipei";
 const TaipeiDetal = () => {
   const navigate = useNavigate();
   const { Id } = useParams();
-  console.log(Id);
   const taipei = taipeiView.filter((item) => item.id == Id);
   return (
     <>

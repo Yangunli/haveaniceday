@@ -7,10 +7,6 @@ const Taipei = () => {
       {taipeiView
         .filter((tpe) => tpe.images[0] !== undefined)
         .map((tpe) => (
-          // <div className="list" key={tpe.id}>
-          //   <p>{tpe.name}</p>
-          //   <img src={tpe.images[0].src} alt="" />
-          // </div>
           <div key={tpe.id} className="list">
             <Link className="link" to={`/haveaniceday/taipei/${tpe.id}`}>
               <img className="pic2" src={tpe.images[0].src} alt={tpe.name} />

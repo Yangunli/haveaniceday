@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
 import { useParams, useNavigate } from "react-router-dom";
+import Loading from "./Loading";
 
 const KeelungDetail = () => {
   const [content, setContent] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const { Id } = useParams();
   const navigate = useNavigate();
   const fetchView = async () => {
@@ -13,12 +15,18 @@ const KeelungDetail = () => {
     );
     const Info = data.attractions.filter((item) => item.id === Id);
     setContent(Info);
+    setIsLoading(false);
   };
 
   useEffect(() => {
     fetchView();
     // eslint-disable-next-line
   }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <>
       {content.map((c) => (
